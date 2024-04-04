@@ -25,12 +25,3 @@
 - Refactoring and custom hooks.
 - U/I improvements.
 
-## To-Do List
-
-### 1. Must Have
-
-    1_1. Create Project structure 
-
-### 2. Nice to Have
-
-    2_1. Show detailed page of a character  when a user click a character.
