@@ -56,9 +56,9 @@
 }
 
 .error-heading {
-  font-size: 10rem; 
+  font-size: 10rem;
   margin-bottom: 20px;
-  color: #dc3545; 
+  color: #dc3545;
 }
 
 .error-subheading {
@@ -68,7 +68,6 @@
 .error-message {
   font-size: 1.2rem;
 }
-
 
 @media only screen and (max-width: 768px) {
   .title {
@@ -91,7 +90,7 @@
   .error-subheading {
     font-size: 2rem;
   }
-  
+
   .error-message {
     font-size: 1rem;
   }
