@@ -29,7 +29,7 @@
 
 ### 1. Must Have
 
-    1_1. Create Project structure 
+    1_1. Create Project structure
 
 ### 2. Nice to Have
 
