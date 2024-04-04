@@ -24,4 +24,3 @@
 - Showing detailed page of a pokemon character.
 - Refactoring and custom hooks.
 - U/I improvements.
-
