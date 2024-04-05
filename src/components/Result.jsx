@@ -1,5 +1,9 @@
+import { usePokegameContext } from "../PokegameContext";
 import "../styles/Result.scss";
-export const Result = ({ totalExp1, totalExp2 }) => {
+export const Result = () => {
+  const {
+    gameState: { totalExp1, totalExp2 },
+  } = usePokegameContext();
   let title;
   if (totalExp1 < totalExp2) {
     title = (
