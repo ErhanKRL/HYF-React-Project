@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Pokeroll } from "../components/Pokeroll";
+import "../styles/Pokegame.scss";
+import { Button } from "../components/Button";
+import { Result } from "../components/Result";
 
 const initilalState = {
   hand1: [
@@ -25,23 +28,20 @@ export const Pokegame = () => {
 
   return (
     <div className="pokegame">
+    <h2 className="Pokedex">Your Balance: {"51"}</h2>
+    {gameState.rekt === true && <h2>Your Balance is Zero</h2>}
       <Pokeroll
         hand={gameState.hand1}
-        exp={gameState.exp1}
-        isWinner={gameState.exp2 < gameState.exp1}
-        who="PEPE"
       />
+      <Result/>
       <Pokeroll
         hand={gameState.hand2}
-        exp={gameState.exp2}
-        isWinner={gameState.exp2 > gameState.exp1}
-        who="YOU"
       />
-      <button className="Pokedex-button" disabled={gameState.rolling}>
+      <Button disabled={gameState.rolling}>
         {gameState.rolling ? "Rolling!" : "Roll"}
-      </button>
-      <p className="Pokedex">Your Balance: {"51"}</p>
-      {gameState.rekt === true && <h2>Your Balance is Zero</h2>}
+      </Button>
+      
+      
     </div>
   );
 };
