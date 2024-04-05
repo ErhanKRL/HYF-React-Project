@@ -1,8 +1,9 @@
 import { Pokecard } from "./Pokecard";
 import "../styles/Pokegame.scss";
-export const Pokeroll = ({ hand,}) => {
+export const Pokeroll = ({ hand, totalExp }) => {
   return (
-    <div className="Pokeroll">
+    <div>
+      <div className="Pokeroll">
         {hand.map((pokemon) => {
           return (
             <Pokecard
@@ -14,6 +15,8 @@ export const Pokeroll = ({ hand,}) => {
             />
           );
         })}
+      </div>
+      <h4>Total Experience: {totalExp}</h4>
     </div>
   );
 };

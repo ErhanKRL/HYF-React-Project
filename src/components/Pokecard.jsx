@@ -1,9 +1,9 @@
 import "../styles/Pokecard.scss";
-const Poke_API = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
+const img_URL = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
 
 let padToThree = (number) => (number > 999 ? number : `00${number}`.slice(-3));
 export const Pokecard = ({ id, name, type, exp }) => {
-  let imgSrc = `${Poke_API}${padToThree(id)}.png`;
+  let imgSrc = `${img_URL}${padToThree(id)}.png`;
 
   return (
     <div className="Pokecard">

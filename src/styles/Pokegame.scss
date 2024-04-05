@@ -1,21 +1,16 @@
 .pokegame {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #eceff1;
-  color: #4d4d4d
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eceff1;
+  color: #4d4d4d;
 }
 
 .Pokeroll {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-
-
-
-
