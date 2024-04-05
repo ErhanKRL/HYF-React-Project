@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
-import "../App.css";
-export const Button = ({ to, children }) => {
+import "../styles/Button.scss";
+export const Button = ({ children, ...props }) => {
   return (
-    <Link to={to} className="button">
+    <button className="button" {...props}>
       {children}
-    </Link>
+    </button>
   );
 };

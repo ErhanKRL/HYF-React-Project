@@ -1,0 +1,101 @@
+/************************* Landing *************************/
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .center-content {
+    text-align: center;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/************************* Error *************************/
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .error-content {
+    text-align: center;
+    h1 {
+      font-size: 10rem;
+      margin-bottom: 20px;
+      color: #dc3545;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .error-message {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+/************************* Media Queries *************************/
+@media only screen and (max-width: 768px) {
+  .landing-page {
+    .center-content {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .error-page {
+    .error-content {
+      h1 {
+        font-size: 7rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .error-message {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .landing-page {
+    .center-content {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .error-page {
+    .error-content {
+      h1 {
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .error-message {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

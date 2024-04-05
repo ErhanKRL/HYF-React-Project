@@ -1,4 +1,4 @@
-import "./App.css";
+import "../src/styles/App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Pokegame } from "./pages/Pokegame";
 import { Landing } from "./pages/Landing";
@@ -6,7 +6,7 @@ import { Error } from "./pages/Error";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />

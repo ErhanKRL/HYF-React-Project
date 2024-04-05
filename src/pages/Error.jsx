@@ -1,11 +1,11 @@
-import "../App.css";
+import "../styles/App.scss";
 export const Error = () => {
   return (
     <div className="error-page">
       <div className="error-content">
-        <h1 className="error-heading">404</h1>
-        <h2 className="error-subheading">Page Not Found</h2>
-        <p className="error-message">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>
           Sorry, the page you are looking for does not exist.
         </p>
       </div>
