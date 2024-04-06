@@ -4,14 +4,11 @@ export const Pokeroll = ({ hand, totalExp }) => {
   return (
     <div>
       <div className="Pokeroll">
-        {hand.map((pokemon) => {
+        {hand.map((pokemonSet, index) => {
           return (
             <Pokecard
-              key={pokemon.id}
-              id={pokemon.id}
-              name={pokemon.name}
-              type={pokemon.type}
-              exp={pokemon.base_experience}
+              key={index}
+              pokemonSet={pokemonSet}
             />
           );
         })}
