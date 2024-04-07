@@ -7,7 +7,7 @@ const img_URL = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
 let padToThree = (number) => (number > 999 ? number : `00${number}`.slice(-3));
 export const Pokecard = ({ pokemonSet}) => {
     const { name, type, base_experience: exp } = pokemonSet[0];
-    const { gameState } = usePokegameContext();
+    const { gameState, setGameState} = usePokegameContext();
     const [isVisible, setIsVisible] = useState(false);
 
     const images = pokemonSet.map((element,index) => {
@@ -17,6 +17,10 @@ export const Pokecard = ({ pokemonSet}) => {
     
     const onAnimationEnd = () => {
         setIsVisible(true);
+        setGameState((prevState) => ({
+            ...prevState,
+            className: 'images animated',
+        }));
     };
 
     return (

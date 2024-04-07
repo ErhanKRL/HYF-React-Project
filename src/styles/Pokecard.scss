@@ -22,7 +22,7 @@
     margin-bottom: 0.5rem;
     justify-content: center;
     position: relative;
-    //overflow: hidden;
+    overflow: hidden;
     .images {
       width: 100%;
       display: flex;
@@ -32,7 +32,6 @@
       padding: 10px;
       background-color: transparent;
       position:absolute;
-      top: -430px;
       border: 1px solid black;
     
       img {
@@ -51,16 +50,20 @@
   }
 }
 
-.images.animated {
+.images.animated{
+  top:0px;
+}
+
+.images.animation {
   animation: roll 3s ease-in-out forwards;
 }
 
 @keyframes roll {
   0% {
-    top: -450; 
+    top: -450px; 
   }
   100% {
-    top: 0%;
+    top: 0px;
   }
 }
 

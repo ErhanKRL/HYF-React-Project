@@ -77,7 +77,7 @@ export const PokegameProvider = ({ children }) => {
     setGameState((prevState) => ({
       ...prevState,
       rolling: true,
-      className: 'images animated',
+      className: 'images animation',
     }));
     const newHand = await roll(gameState);
     setGameState((prevState) => ({
