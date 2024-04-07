@@ -10,7 +10,9 @@ export const Pokeroll = ({ hand, totalExp }) => {
           return <Pokecard key={index} pokemonSet={pokemonSet} />;
         })}
       </div>
-      <h4 className="totalExp">Total Experience: {gameState.rolling ? "---" : totalExp}</h4>
+      <h4 className="totalExp">
+        Total Experience: {gameState.rolling ? "---" : totalExp}
+      </h4>
     </div>
   );
 };

@@ -32,7 +32,7 @@
       padding: 10px;
       background-color: transparent;
       position: absolute;
-
+      border: 1px solid #4d4d4d;
       img {
         width: 100%;
         height: auto;
@@ -51,12 +51,12 @@
 }
 
 .images.animation {
-  animation: roll 3s ease-in-out forwards;
+  animation: roll 1s ease-in-out forwards;
 }
 
 @keyframes roll {
   0% {
-    top: -450px;
+    top: -470px;
   }
   100% {
     top: 0px;
@@ -67,16 +67,15 @@
   visibility: hidden;
 }
 
-
 /* Adjustments for screens larger than 1024px */
 @media (max-width: 1024px) {
   .Pokecard {
     width: 180px;
   }
-  .slot{
+  .slot {
     height: 120px;
   }
-  h3{
+  h3 {
     font-size: 12px;
   }
   p {
@@ -86,11 +85,11 @@
 
 @media (max-width: 840px) {
   .Pokecard {
-    width: 150px; 
-    .slot{
+    width: 150px;
+    .slot {
       height: 120px;
     }
-    h3{
+    h3 {
       font-size: 12px;
     }
     p {
@@ -100,21 +99,21 @@
 }
 @media (max-width: 768px) {
   .Pokecard {
-    width: 120px; 
+    width: 120px;
     margin: 0.5rem;
-    .slot{
+    .slot {
       height: 100px;
     }
   }
 }
 @media (max-width: 576px) {
   .Pokecard {
-    width: 100px; 
+    width: 100px;
     margin: 0.5rem;
-    .slot{
+    .slot {
       height: 80px;
     }
-    h3{
+    h3 {
       font-size: 10px;
     }
     p {
@@ -124,12 +123,12 @@
 }
 @media (max-width: 486px) {
   .Pokecard {
-    width: 80px; 
+    width: 80px;
     margin: 0.3rem;
-    .slot{
+    .slot {
       height: 60px;
     }
-    h3{
+    h3 {
       font-size: 6px;
     }
     p {
