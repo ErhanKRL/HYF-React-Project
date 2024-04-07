@@ -63,6 +63,7 @@ const initialState = {
   rolling: false,
   balance: 100,
   className: 'images',
+  isVisible: true
 };
 
 const PokegameContext = createContext();
@@ -72,22 +73,36 @@ export const usePokegameContext = () => useContext(PokegameContext);
 export const PokegameProvider = ({ children }) => {
   const [gameState, setGameState] = useState(initialState);
 
+  const countBalance = () => {
+    const totalExp1 = gameState.hand1.reduce(
+        (acc, pokemon) => acc + pokemon[0].base_experience,
+        0,
+      );
+      const totalExp2 = gameState.hand2.reduce(
+        (acc, pokemon) => acc + pokemon[0].base_experience,
+        0,
+      );
+      const balance =
+        totalExp1 < totalExp2 ? gameState.balance + 1 : gameState.balance - 1;
+    return {
+      totalExp1,
+      totalExp2,
+      balance,
+    };
+  }
+
   const rollAHand = async () => {
-    
-    setGameState((prevState) => ({
-      ...prevState,
-      rolling: true,
-      className: 'images animation',
-    }));
     const newHand = await roll(gameState);
     setGameState((prevState) => ({
       ...prevState,
       ...newHand,
-      rolling: false
+      rolling: true,
+      isVisible: false,
+      className: 'images animation'
     }));
   };
   return (
-    <PokegameContext.Provider value={{ gameState, setGameState, rollAHand }}>
+    <PokegameContext.Provider value={{ gameState, setGameState, rollAHand, countBalance }}>
       {children}
     </PokegameContext.Provider>
   );

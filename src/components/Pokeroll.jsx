@@ -1,6 +1,8 @@
 import { Pokecard } from "./Pokecard";
+import { usePokegameContext } from "../PokegameContext";
 import "../styles/Pokegame.scss";
 export const Pokeroll = ({ hand, totalExp }) => {
+  const { gameState } = usePokegameContext();
   return (
     <div>
       <div className="Pokeroll">
@@ -13,7 +15,7 @@ export const Pokeroll = ({ hand, totalExp }) => {
           );
         })}
       </div>
-      <h4>Total Experience: {totalExp}</h4>
+      <h4>Total Experience: {gameState.rolling ? "---" : totalExp}</h4>
     </div>
   );
 };
