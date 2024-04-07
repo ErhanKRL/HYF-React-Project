@@ -7,12 +7,7 @@ export const Pokeroll = ({ hand, totalExp }) => {
     <div>
       <div className="Pokeroll">
         {hand.map((pokemonSet, index) => {
-          return (
-            <Pokecard
-              key={index}
-              pokemonSet={pokemonSet}
-            />
-          );
+          return <Pokecard key={index} pokemonSet={pokemonSet} />;
         })}
       </div>
       <h4>Total Experience: {gameState.rolling ? "---" : totalExp}</h4>

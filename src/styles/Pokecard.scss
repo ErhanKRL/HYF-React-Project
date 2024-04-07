@@ -6,8 +6,8 @@
   text-align: center;
   background-color: white;
   border-radius: 4px;
-  h3{
-    color:black;
+  h3 {
+    color: black;
   }
   p {
     font-size: 12px;
@@ -31,8 +31,8 @@
       align-items: center;
       padding: 10px;
       background-color: transparent;
-      position:absolute;
-    
+      position: absolute;
+
       img {
         width: 100%;
         height: auto;
@@ -43,14 +43,11 @@
         transition: 500ms;
       }
     }
-
-  
-    
   }
 }
 
-.images.animated{
-  top:0px;
+.images.animated {
+  top: 0px;
 }
 
 .images.animation {
@@ -59,7 +56,7 @@
 
 @keyframes roll {
   0% {
-    top: -450px; 
+    top: -450px;
   }
   100% {
     top: 0px;

@@ -10,8 +10,8 @@ const createRandomIds = () => {
 };
 
 const createRandomHand = async () => {
-const hand = [];
-  for(let i = 0; i < 4; i++) {
+  const hand = [];
+  for (let i = 0; i < 4; i++) {
     const ids = createRandomIds();
     const set = await Promise.all(ids.map((id) => fetchPokemon(id)));
     hand.push(set);
@@ -22,10 +22,10 @@ const hand = [];
 export const roll = async () => {
   const hand1 = await createRandomHand();
   const hand2 = await createRandomHand();
-  
+
   const newHand = {
     hand1,
-    hand2
+    hand2,
   };
   return newHand;
 };
