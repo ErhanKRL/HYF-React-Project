@@ -7,7 +7,7 @@
   background-color: white;
   border-radius: 4px;
   h3 {
-    color: black;
+    color: #4d4d4d;
   }
   p {
     font-size: 12px;
@@ -15,7 +15,7 @@
   .slot {
     margin: auto;
     margin-top: 0.5rem;
-    width: 80%;
+    width: 86%;
     height: 150px;
     background-color: #eceff1;
     border-radius: 4px;
@@ -65,4 +65,75 @@
 
 .Pokecard .hidden {
   visibility: hidden;
+}
+
+
+/* Adjustments for screens larger than 1024px */
+@media (max-width: 1024px) {
+  .Pokecard {
+    width: 180px;
+  }
+  .slot{
+    height: 120px;
+  }
+  h3{
+    font-size: 12px;
+  }
+  p {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 840px) {
+  .Pokecard {
+    width: 150px; 
+    .slot{
+      height: 120px;
+    }
+    h3{
+      font-size: 12px;
+    }
+    p {
+      font-size: 8px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Pokecard {
+    width: 120px; 
+    margin: 0.5rem;
+    .slot{
+      height: 100px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .Pokecard {
+    width: 100px; 
+    margin: 0.5rem;
+    .slot{
+      height: 80px;
+    }
+    h3{
+      font-size: 10px;
+    }
+    p {
+      font-size: 6px;
+    }
+  }
+}
+@media (max-width: 486px) {
+  .Pokecard {
+    width: 80px; 
+    margin: 0.3rem;
+    .slot{
+      height: 60px;
+    }
+    h3{
+      font-size: 6px;
+    }
+    p {
+      font-size: 4px;
+    }
+  }
 }
