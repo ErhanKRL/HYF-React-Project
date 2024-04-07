@@ -6,8 +6,15 @@
   border-radius: 5px;
   font-size: 1.2rem;
   min-width: 100px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  .gotoApp {
+    color: white;
+    text-decoration: none;
+  }
 }
-
 .button:hover {
   background-color: #0056b3;
 }
