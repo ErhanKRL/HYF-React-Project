@@ -62,6 +62,7 @@ const initialState = {
   totalExp2: 0,
   rolling: false,
   point: 0,
+  className: 'images',
 };
 
 const PokegameContext = createContext();
@@ -72,15 +73,17 @@ export const PokegameProvider = ({ children }) => {
   const [gameState, setGameState] = useState(initialState);
 
   const rollAHand = async () => {
+    
     setGameState((prevState) => ({
       ...prevState,
       rolling: true,
+      className: 'images animated',
     }));
     const newHand = await roll(gameState);
     setGameState((prevState) => ({
       ...prevState,
       ...newHand,
-      rolling: false,
+      rolling: false
     }));
   };
   return (

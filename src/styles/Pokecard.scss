@@ -22,8 +22,8 @@
     margin-bottom: 0.5rem;
     justify-content: center;
     position: relative;
-    overflow: hidden;
-    div {
+    //overflow: hidden;
+    .images {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -33,11 +33,8 @@
       background-color: transparent;
       position:absolute;
       top: -430px;
-      animation-name: roll;
-      animation-duration: 3s;
-      animation-timing-function: ease-out;
-      animation-fill-mode: forwards;
-      
+      border: 1px solid black;
+    
       img {
         width: 100%;
         height: auto;
@@ -49,15 +46,21 @@
       }
     }
 
-    @keyframes roll {
-      0% {
-        top: -450; /* Start position at the top */
-      }
-      100% {
-        top: 0%; /* End position at 300% (3 times the height of the images) to simulate rolling */
-      }
-    }
+  
     
+  }
+}
+
+.images.animated {
+  animation: roll 3s ease-in-out forwards;
+}
+
+@keyframes roll {
+  0% {
+    top: -450; 
+  }
+  100% {
+    top: 0%;
   }
 }
 
