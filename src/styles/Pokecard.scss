@@ -6,10 +6,13 @@
   text-align: center;
   background-color: white;
   border-radius: 4px;
+  h3 {
+    color: black;
+  }
   p {
     font-size: 12px;
   }
-  div {
+  .slot {
     margin: auto;
     margin-top: 0.5rem;
     width: 80%;
@@ -18,13 +21,48 @@
     border-radius: 4px;
     margin-bottom: 0.5rem;
     justify-content: center;
-    img {
+    position: relative;
+    overflow: hidden;
+    .images {
       width: 100%;
-      height: 100%;
-    }
-    img:hover {
-      transform: scale(1.15);
-      transition: 500ms;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: transparent;
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+      }
+      img:hover {
+        transform: scale(1.15);
+        transition: 500ms;
+      }
     }
   }
+}
+
+.images.animated {
+  top: 0px;
+}
+
+.images.animation {
+  animation: roll 3s ease-in-out forwards;
+}
+
+@keyframes roll {
+  0% {
+    top: -450px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.Pokecard .hidden {
+  visibility: hidden;
 }
