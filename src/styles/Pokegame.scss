@@ -22,7 +22,7 @@
   .Pokeroll {
     margin-top: 20px;
   }
-  .totalExp{
+  .totalExp {
     font-size: 12px;
     margin-left: 12px;
     margin-bottom: 20px;
@@ -30,15 +30,14 @@
 }
 
 @media screen and (max-width: 576px) {
-  .totalExp{
+  .totalExp {
     font-size: 10px;
     margin-left: 10px;
   }
 }
 
 @media screen and (max-width: 468px) {
-  .totalExp{
+  .totalExp {
     margin-left: 8px;
   }
-  
 }

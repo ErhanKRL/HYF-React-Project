@@ -12,7 +12,9 @@ export const Landing = () => {
           exciting adventures with your favorite Pokemons!
         </p>
         <Button>
-          <Link className="gotoApp" to={"/pokegame"}>Go to App</Link>
+          <Link className="gotoApp" to={"/pokegame"}>
+            Go to App
+          </Link>
         </Button>
       </div>
     </div>
