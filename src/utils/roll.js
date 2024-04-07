@@ -30,15 +30,15 @@ export const roll = async (gameState) => {
     (acc, pokemon) => acc + pokemon[0].base_experience,
     0,
   );
-  const point =
-    totalExp1 < totalExp2 ? gameState.point + 1 : gameState.point - 1;
-  console.log(point);
+  const balance =
+    totalExp1 < totalExp2 ? gameState.balance + 1 : gameState.balance - 1;
+  console.log(balance);
   const newHand = {
     hand1,
     hand2,
     totalExp1,
     totalExp2,
-    point,
+    balance,
   };
   return newHand;
 };

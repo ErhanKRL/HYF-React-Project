@@ -9,7 +9,7 @@ export const Pokegame = () => {
   return (
     <div className="pokegame">
       <h2 className="Pokedex">
-        Your Point: {gameState.point < 0 ? 0 : gameState.point}
+        {`Your Balance: ${gameState.balabce < 0 ? 0 : gameState.balance} €`}
       </h2>
       <Pokeroll hand={gameState.hand1} totalExp={gameState.totalExp1} />
       <Result />

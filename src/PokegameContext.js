@@ -61,7 +61,7 @@ const initialState = {
   totalExp1: 0,
   totalExp2: 0,
   rolling: false,
-  point: 0,
+  balance: 100,
   className: 'images',
 };
 
