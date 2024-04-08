@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import { Pokegame } from "../pages/Pokegame";
-import { usePokegameContext } from "../PokegameContext"; 
+import { usePokegameContext } from "../PokegameContext";
 
-jest.mock("../PokegameContext"); 
+jest.mock("../PokegameContext");
 
 describe("Pokegame component", () => {
   test("renders balance correctly", () => {
     const mockGameState = {
-      balance: 100, 
-      hand1: [], 
+      balance: 100,
+      hand1: [],
       hand2: [],
       totalExp1: 0,
       totalExp2: 0,
@@ -38,7 +38,6 @@ describe("Pokegame component", () => {
   });
 
   test("renders Button component", () => {
-   
     const mockGameState = {
       balance: 100,
       hand1: [],

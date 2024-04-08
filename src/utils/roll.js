@@ -9,16 +9,16 @@ const createRandomIds = () => {
   return ids;
 };
 
-const createRandomHand = async ( hand1, hand2) => {
-    const newHand1 = [...hand1];
-    const newHand2 = [...hand2];
+const createRandomHand = async (hand1, hand2) => {
+  const newHand1 = [...hand1];
+  const newHand2 = [...hand2];
   const ids = createRandomIds();
   for (let i = 0; i < 8; i++) {
     const set = await Promise.all(ids.map((id) => fetchPokemon(id)));
-    if(i < 4){
+    if (i < 4) {
       hand1[i].push(set[i]);
       hand1[i].shift();
-    }else{
+    } else {
       hand2[i - 4].push(set[i]);
       hand2[i - 4].shift();
     }
@@ -30,7 +30,7 @@ const createRandomHand = async ( hand1, hand2) => {
 };
 
 export const roll = async ({ hand1, hand2 }) => {
-  const {newHand1, newHand2} = await createRandomHand(hand1, hand2);
+  const { newHand1, newHand2 } = await createRandomHand(hand1, hand2);
 
   const newHand = {
     newHand1,
