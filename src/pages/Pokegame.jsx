@@ -15,7 +15,7 @@ export const Pokegame = () => {
       <Result />
       <Pokeroll hand={gameState.hand2} totalExp={gameState.totalExp2} />
       <Button onClick={rollAHand} disabled={gameState.rolling}>
-        {gameState.rolling ? "Rolling!" : "Roll"}
+        {gameState.rolling ? "ROLLING!" : "ROLL"}
       </Button>
     </div>
   );
