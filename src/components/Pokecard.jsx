@@ -13,14 +13,14 @@ export const Pokecard = ({ pokemonSet }) => {
     return <img key={index} src={imgSrc} alt="" />;
   });
 
-  const { totalExp1, totalExp2, balance } = countBalance();
+  const { totalExp1, totalExp2, totalBalance } = countBalance();
   const onAnimationEnd = () => {
     setGameState((prevState) => ({
       ...prevState,
       className: "images animated",
       rolling: false,
       isVisible: true,
-      balance: balance,
+      balance: totalBalance,
       totalExp1: totalExp1,
       totalExp2: totalExp2,
     }));

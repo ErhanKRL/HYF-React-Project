@@ -119,7 +119,6 @@ export const PokegameProvider = ({ children }) => {
       totalBalance,
     };
   };
-  console.log('context')
   const rollAHand = async () => {
     const newHand = await roll({hand1, hand2});
     setGameState((prevState) => ({
