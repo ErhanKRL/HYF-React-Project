@@ -7,6 +7,7 @@
 - Application is basically a kind of jackpod that user can gain or lose fake money according to total experience points of characters at every roll.
 - Context API, useState hook and prop drilling is used at neccessary places.
 - Data s are provided by [pokeapi.co](https://pokeapi.co/docs/v2#pokemon) API.
+- You can find working product here: [pokepot.netlify.app](https://pokepot.netlify.app/)
 
 ## Must Have
 
