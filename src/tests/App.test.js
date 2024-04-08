@@ -6,10 +6,10 @@ import { Landing } from "../pages/Landing";
 test("renders Landing page by default", () => {
   render(
     <Router>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-        </Routes>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+    </Router>,
   );
   const landingTitle = screen.getByText(/Poke Game Center/i);
   expect(landingTitle).toBeInTheDocument();
@@ -18,10 +18,10 @@ test("renders Landing page by default", () => {
 test("renders Error page for unknown routes", () => {
   render(
     <Router>
-    <Routes>
-      <Route path="/*" element={<Error />} />
-    </Routes>
-  </Router>
+      <Routes>
+        <Route path="/*" element={<Error />} />
+      </Routes>
+    </Router>,
   );
   const errorTitle = screen.getByText(/404/i);
   expect(errorTitle).toBeInTheDocument();

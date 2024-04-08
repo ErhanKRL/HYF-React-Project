@@ -11,6 +11,7 @@ export const Pokegame = () => {
       <h2 className="Pokedex">
         {`Your Balance: ${gameState.balabce < 0 ? 0 : gameState.balance} €`}
       </h2>
+      {gameState.error && <p className="error">{gameState.error}</p>}
       <Pokeroll hand={gameState.hand1} totalExp={gameState.totalExp1} />
       <Result />
       <Pokeroll hand={gameState.hand2} totalExp={gameState.totalExp2} />
